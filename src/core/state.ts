@@ -242,7 +242,7 @@ export class State {
     }
   }
 
-  public generateDevice(seed: string, deviceString: string, deviceId: string): void {
+  public generateDevice(seed: string, deviceString: string, deviceId: string, build: string): void {
     const chance = new Chance(seed);
     // this.deviceString = chance.pickone(devices);
     this.deviceString = deviceString;
@@ -255,7 +255,8 @@ export class State {
     this.uuid = chance.guid();
     this.phoneId = chance.guid();
     this.adid = chance.guid();
-    this.build = chance.pickone(builds);
+    // this.build = chance.pickone(builds);
+    this.build = build;
   }
 
   private generateTemporaryGuid(seed: string, lifetime: number) {
