@@ -242,14 +242,14 @@ export class State {
     }
   }
 
-  public generateDevice(seed: string): void {
+  public generateDevice(seed: string, deviceString: string): void {
     const chance = new Chance(seed);
-    this.deviceString = chance.pickone(devices);
-    // const id = chance.string({
-    //   pool: 'abcdef0123456789',
-    //   length: 16,
-    // });
-    const id = '28/9; 440dpi; 1080x2134; Xiaomi; Redmi Note 8 Pro; mt6785; ru_RU';
+    // this.deviceString = chance.pickone(devices);
+    this.deviceString = deviceString;
+    const id = chance.string({
+      pool: 'abcdef0123456789',
+      length: 16,
+    });
     this.deviceId = `android-${id}`;
     this.uuid = chance.guid();
     this.phoneId = chance.guid();
