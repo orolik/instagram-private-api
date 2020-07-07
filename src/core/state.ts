@@ -242,15 +242,16 @@ export class State {
     }
   }
 
-  public generateDevice(seed: string, deviceString: string): void {
+  public generateDevice(seed: string, deviceString: string, deviceId: string): void {
     const chance = new Chance(seed);
     // this.deviceString = chance.pickone(devices);
     this.deviceString = deviceString;
-    const id = chance.string({
-      pool: 'abcdef0123456789',
-      length: 16,
-    });
-    this.deviceId = `android-${id}`;
+    // const id = chance.string({
+    //   pool: 'abcdef0123456789',
+    //   length: 16,
+    // });
+    // this.deviceId = `android-${id}`;
+    this.deviceId = `android-${deviceId}`;
     this.uuid = chance.guid();
     this.phoneId = chance.guid();
     this.adid = chance.guid();
