@@ -4,7 +4,7 @@ import * as Chance from 'chance';
 import { jar } from 'request';
 import { Cookie, CookieJar, MemoryCookieStore } from 'tough-cookie';
 // import * as devices from '../samples/devices.json';
-import * as builds from '../samples/builds.json';
+// import * as builds from '../samples/builds.json';
 import * as supportedCapabilities from '../samples/supported-capabilities.json';
 import * as Constants from './constants';
 import { ChallengeStateResponse, CheckpointResponse } from '../responses';
