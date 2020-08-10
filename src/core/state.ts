@@ -61,7 +61,8 @@ export class State {
   @Enumerable(false)
   constants = Constants;
   supportedCapabilities = supportedCapabilities;
-  language: string = 'en_US';
+  // language: string = 'en_US';
+  language: string = 'ru_RU';
   timezoneOffset: string = String(new Date().getTimezoneOffset() * -60);
   radioType = 'wifi-none';
   capabilitiesHeader = '3brTvwE=';
